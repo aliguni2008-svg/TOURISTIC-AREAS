@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Viewport" content="width", initial-scale=1.0">
+        <title>Best place to visit in Mombasa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+        <!--our CSS file-->
+        <link rel="stylesheet" href="style.css">
+
+        <!--our javascript file("defer"waits for the paga to load first)-->
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header id="top">
+            <h1>Best place to visit in Mombasa</h1>
+            <p>A collection of the most beautiful desthinations Mombasa</p>
+    </body>
+
+    <!--Navigation bar: each link jump to a place on this page-->
+    <nav>
+        <a href="#gederuins">#Gede Ruins</a>
+        <a href="#fortjesus">Fort Jesus</a>
+        <a href="#mamangina">Mama Ngina</a>
+        <a href="#likoniferry">Likoni Ferry</a>
+        <a href="#pirates">Pirates</a>
+        <a href="#malindi">Malindi</a>
+        <a href="#video">Video</a>
+    </nav>
+
+    <main>
+        <h2>Popular Tourist Attractions</h2>
+        <p>Click any picture to enlarge it.</p>
+
+        <figure id="gederuins">
+            <IMG CLASS="place" src="gederuins.jpg" alt="front view of hawa mahal in jiapur" width="600" height="400">
+                <figcaption>hawa mahal,jaipur-famous for itsunque honeycomb dsign.</figcaption>
+        </figure>
+
+        <figure id="fortjesus">
+            <img class="place" src="fortjesus.jpg" alt="Golden sandstone jaisalmer fort during sunset" width="600" height="400">
+            <figcaption>jaisalmer fort-one of the largest living forts in the world.</figcaption> 
+        </figure>
+        <figure>
+            <figure id="mamangina">
+                <img class="place" src="mamangina.webp" alt="Lake pichola with city palace in Udaipur" width="600" height="400">
+                <figcaption>udaipur-known as the city of lakes.</figcaption>
+            </figure>
+
+            <figure id="likoniferry">
+                <img class="place" src="likoniferry.jpg" alt="mehrangarh fort overlooking Jodhpur ciry" width="600" height="400">
+                <figcaption>mehrangarh fort, Jodhpur-Towers above the blue ciry.</figcaption>
+            </figure>
+        
+            <figure id="pirates">
+                <img class="placa" src="pirates.jpg" alt="Royal Bengal tiger walking in ranthambore National park" width="600" height="400">
+                <figcaption>ranthambore National park-A famous place to spot tigers</figcaption>
+            </figure>
+
+            <figure id="malindi">
+                <img class="placa" src="malindi.webp" alt="pushkar Lake surrounded by  temples and ghats" width="600" height="400">
+                <figcaption>pushkar-A holy Lake  surroundedby tempeles and ghats.</figcaption>
+            </figure>
+
+            <h2>Decorative Image</h2>
+
+            <!--Empty alt because this image is only decoration -->
+            <img src="rajasthan-travel-poster.jpg" alt="" width="600" height="200">
+
+            <h2 id="Video">Rajasthan Tourism Video</h2>
+
+            <iframe
+            width="560"
+            height="315"
+
+            src=""
+            title="YouTube Video Player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; Wed-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </figure>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Rajasthan Gallery. All Rights Resserved.</p>
+    </footer>
+    <!--Back to top button (Javascript shows it when you scoll down)-->
+    <button id="top-btn" title="Back to top"hidden> Top</button>
+
+    <!--Click-top-btn-enlarge box (hidden until a picture is Clicked)-->
+    <div id="lighbox" class="lighbox"hidden>
+        <button id="close btn" title="close">❌ close</button>
+        <img id="lighbox-img" src="" alt="">
+        <p id="lighbox-caption"></p>
+        <button id="next-btn">Next➡️</button>
+    </div>
+</body>
+    </html>

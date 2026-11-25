@@ -1,0 +1,217 @@
+/* set up colour palrtte using variables */
+
+:root {
+    --primary: #ffaf0;
+    --secondary: #c1440e;
+    --tertiary: #e8a317;
+    --page: #fdf3el;
+    --onprimary: #4e3426;
+    --onsecondary: #ffffff;
+    --ontertary: #2b1b10;
+    --onpage: #4a3426;
+    --detail: #1f6f8b;
+    --detail2: #c1440e;
+}
+
+/* Appiy everywhere */
+
+* {
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box; /* padding and border don't make a box bigger */
+}
+
+/* The whole page */
+
+body {
+    background: var(--page);
+    color: var(--onpage);
+    font: var(--body-font);
+    text-align: center;
+}
+
+/* Header and footer */
+
+header{
+    background: var(--secondary);
+    color: var(--onsecondary);
+    podding: 1.5rem 1rem;
+    border-bottom: 10px solid var(--secondary);
+}
+
+footer {
+    background: var(--tertiary);
+    color: var(--onsecondary);
+    padding: 1rem;
+    border-top: 10px solid var(--secondary);
+}
+
+/* The main content between the header and footer */
+
+main {
+    background: var(--primary);
+    color: var(--onprimary);
+    max-width: 50rem;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    border: 0.25rem solid var(--detail2);
+    border-radius: 1rem;
+} 
+
+/* Heading */
+
+h1 {
+    font: var(--header-font);
+    padding: 0.5rem;
+}
+
+h2 {
+    font: var(--title-font);
+    color: var(--detail);
+    margin: 1.5rem 0 1rem 0;
+}
+
+/* paragraphs */
+
+p {
+    padding: 0.25rem 0.5rem;
+}
+
+/* Images, caption and video */
+
+img,
+iframe{
+    max-width: 100%; /* Never wider than the box they sit in /*
+    height: auto;
+    border: 0.25rem var(--tertiary);
+    border-radius: 0.5rem;
+}
+
+iframe {
+  height: 20rem;
+}
+
+figure {
+  margin: 1rem;
+}
+
+figcaption {
+  font-style: italic;
+  colour: var(--detail);
+  padding-top: 0.5rem;
+}
+
+
+/* ----------Added for navbar, lightbox and back-to-top---------- */
+
+/* smooth  scrolling when a nav link is click */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation bar that stays at the top while scolling */
+nav {
+    background: var(--tertiary);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: var(--ontertary);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+nav a:hover {
+    background: var(--secondary);
+    color: var(--onsecondary);
+}
+
+/* stop the sticky nav from covering a figure after a jump */
+figure,
+h2 {
+    scroll-margin-top: 4rem;
+}
+
+/* picture you can click get a pointer hand */
+.place {
+    cursor: pointer;
+}
+
+/* Button */
+button {
+    font: var(--body-font);
+    font-weight: bold;
+    background: var(--secondary);
+    color: var(--onsecondary);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--detail);
+}
+
+/* back to top button sits in the button-right corner */
+#top-btn {
+    position: fixed;
+    border: 1.5rem;
+    right: 1.5rem;
+    z-index: 10;
+    background: var(--tertiary);
+    color: var(--ontertary);
+    border: 0.2rem solid var(--secondary);
+    border-radius: 2rem; /* pill shape */
+    padding: 0.75rem 1.25rem;
+    font-size: 1.1rem;
+    box-shadow: 0 0.25rem 0.75rem rgb(0, 0, 0, 0.3);
+    transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+
+#top-btn:hover {
+    background: var(--secondary);
+    color: var(--onsecondary);
+    transform: translate(-0.25rem); /*lifts up  slighty */
+}
+
+/* Click-to-enlarge box covers the whole screen */
+.lightbox {
+    position: fixed;
+    inset: 0; /* top, right, botton and lift all 0 */
+    background: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    z-index: 20;
+    display: flex;
+    flax-direction: column
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* The hidden attribute must win over diplay: flax*/
+.lightbox[hidden],
+#top-btn[hidden] {
+    display: none;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 70vh;
+}
+
+#close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
